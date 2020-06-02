@@ -120,6 +120,29 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJN-th-c5K" userLabel="Timer View">
                                         <rect key="frame" x="0.0" y="571.5" width="374" height="246.5"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="l8A-tX-hJK">
+                                                <rect key="frame" x="0.0" y="120.5" width="374" height="6"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="pvX-PA-RHC"/>
+                                                </constraints>
+                                                <color key="progressTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="trackTintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </progressView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6k3-ZQ-AI2">
+                                                <rect key="frame" x="187" y="50" width="0.0" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="l8A-tX-hJK" firstAttribute="leading" secondItem="nJN-th-c5K" secondAttribute="leading" id="GBj-bv-ozd"/>
+                                            <constraint firstAttribute="trailing" secondItem="l8A-tX-hJK" secondAttribute="trailing" id="LO6-HJ-hLQ"/>
+                                            <constraint firstItem="6k3-ZQ-AI2" firstAttribute="top" secondItem="nJN-th-c5K" secondAttribute="top" constant="50" id="Pfu-Vo-ig8" userLabel="Counter Label.top = top"/>
+                                            <constraint firstItem="l8A-tX-hJK" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="UBB-gp-fLs"/>
+                                            <constraint firstItem="6k3-ZQ-AI2" firstAttribute="centerX" secondItem="nJN-th-c5K" secondAttribute="centerX" id="yb9-k1-J8j"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -133,10 +156,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="6k3-ZQ-AI2" id="79Z-C1-WQS"/>
+                        <outlet property="progressBar" destination="l8A-tX-hJK" id="hPd-s8-qlp"/>
+                        <outlet property="titleLabel" destination="XLm-5r-pSP" id="Qnc-lF-IvK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="274" y="76"/>
         </scene>
     </scenes>
     <resources>
